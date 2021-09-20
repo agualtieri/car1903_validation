@@ -1,0 +1,24 @@
+## HQ Checks
+
+rm(list = ls())
+
+library(tidyverse)
+library(openxlsx)
+library(cleaninginspectoR)
+library(compareDF)
+
+clean <- read.xlsx("./input/CAR1903_analyse_data_mi_janvier2021.xlsx", sheet = "clean_data")
+log <- read.xlsx("./input/CAR1903_analyse_data_mi_janvier2021.xlsx", sheet = "cleaning_log")
+
+issues <- inspect_all(clean)
+
+
+there <- anti_join(clean, log, "uuid")
+
+meds <- clean %>% select(q0_6_admin3, mais_350g_prix, manioc_500g_prix, riz_500g_prix, haricot_500g_prix, arachide_150g_prix,
+                         viande_prix, huile_vegetale_prix, savon_200g_prix)
+
+sapply(meds, class)
+
+
+maiz_med <- meds %>% group_by(q0_6_admin3) %>% summarise_all(~median(., na.rm = TRUE))

@@ -1,0 +1,32 @@
+{
+    "id": "AB620C0E",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1610710305263.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "expression": "maiz_med",
+        "caption": "maiz_med",
+        "totalObservations": "6",
+        "displayedObservations": "6",
+        "variables": "9",
+        "cacheKey": "A2A6875A",
+        "object": "maiz_med",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=maiz_med&cache_key=A2A6875A&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 4294967297,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610710305263,
+    "read_only": false,
+    "read_only_alternatives": []
+}
